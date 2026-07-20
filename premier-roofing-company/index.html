@@ -2,189 +2,338 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Premier Roofing Company — Roofing in Johnston, IA</title>
-<meta name="description" content="Premier Roofing Company — Johnston's trusted roofing professionals. 4.3★ on Google (81 reviews) Free estimates: (515) 276-7663." />
+<meta name="description" content="Premier Roofing Company — Johnston's trusted roofing professionals. 4.3★ on Google, 81 reviews. Free estimates: (515) 276-7663." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@300;400;500;600;700&family=Roboto+Slab:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --brand:#1d3557;
-  --accent:#f4a825;
-  --ink:#141518; --paper:#ffffff; --mist:#f4f5f7; --line:#e4e6ea; --sub:#5b6068;
+  --void:#050505; --void-2:#0b0a08; --ink:#0f0d0a;
+  --gold:#C9A13B; --gold-bright:#E4C56B; --gold-hi:#F0DA96;
+  --paper:#F5F1E8; --paper-dim:#b8b2a4; --paper-faint:#6d6959;
+  --line:rgba(201,161,59,.22);
+  --cond:'Anton','Oswald','Arial Narrow',sans-serif;
+  --disp:'Oswald','Arial Narrow',sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-h1,h2,h3,.btn{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em}
-img{max-width:100%}
-a{color:inherit}
+body{background:var(--void);color:var(--paper);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--gold);color:#000}
+a{color:inherit;text-decoration:none}
 
 /* preview ribbon */
-.ribbon{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--ink);color:#fff;
-  font-size:12.5px;padding:8px 16px;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
-.ribbon b{color:var(--accent);font-weight:600}
-.ribbon a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent)}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:70;background:var(--void-2);border-bottom:1px solid var(--line);
+  color:var(--paper-dim);font-size:12px;padding:8px 14px;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;letter-spacing:.02em}
+.ribbon b{color:var(--gold-bright);font-weight:600;font-family:var(--disp);letter-spacing:.2em;font-size:11px}
+.ribbon a{color:var(--gold-bright);border-bottom:1px solid var(--gold);padding-bottom:1px}
+
+#grain{position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* nav */
-.nav{position:sticky;top:34px;z-index:98;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;
-  padding:14px clamp(16px,5vw,56px)}
-.nav-brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(16px,2.4vw,22px);
-  text-transform:uppercase;letter-spacing:.03em;text-decoration:none}
-.nav-brand span{color:var(--brand)}
-.nav-phone{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;text-decoration:none;
-  background:var(--brand);color:#fff;padding:10px 20px;border-radius:6px;transition:.2s}
-.nav-phone:hover{background:var(--accent);color:var(--ink)}
+.nav{position:fixed;top:34px;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,52px)}
+.nav-word{display:flex;flex-direction:column;line-height:1}
+.nav-word b{font-family:var(--disp);font-weight:600;letter-spacing:.26em;font-size:13px;color:var(--paper)}
+.nav-word i{font-style:normal;font-weight:400;letter-spacing:.3em;font-size:8px;color:var(--gold-bright);margin-top:4px;opacity:.9}
+.nav-cta{font-family:var(--disp);font-weight:500;letter-spacing:.16em;font-size:11px;text-transform:uppercase;color:var(--paper);border:1px solid rgba(255,255,255,.6);padding:8px 16px;border-radius:100px;transition:.3s}
+.nav-cta:hover{border-color:var(--gold);color:var(--gold-bright)}
 
 /* hero */
-.hero{margin-top:0;min-height:88vh;display:flex;align-items:center;position:relative;color:#fff;
-  background:linear-gradient(115deg,rgba(10,12,16,.94) 0%,rgba(10,12,16,.72) 55%,rgba(10,12,16,.45) 100%),
-  var(--brand);background-blend-mode:normal}
-.hero::after{content:"";position:absolute;inset:0;
-  background:radial-gradient(1000px 500px at 85% 20%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 60%);
-  pointer-events:none}
-.hero-inner{position:relative;z-index:1;padding:110px clamp(16px,6vw,72px) 80px;max-width:860px}
-.hero-eyebrow{font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--accent);margin-bottom:18px}
-.hero h1{font-size:clamp(38px,6.4vw,72px);line-height:1.04;font-weight:700;margin-bottom:22px}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{font-size:clamp(16px,2vw,19px);color:#d7dae0;max-width:34em;margin-bottom:34px;font-weight:300}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
-.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16px;padding:16px 32px;
-  border-radius:6px;transition:.2s}
-.btn-solid{background:var(--accent);color:var(--ink)}
-.btn-solid:hover{filter:brightness(1.08);transform:translateY(-1px)}
-.btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
-.btn-line:hover{border-color:var(--accent);color:var(--accent)}
-.hero-stars{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.16);border-radius:99px;padding:9px 18px;font-size:14px}
-.hero-stars b{color:var(--accent);letter-spacing:.12em;font-size:15px}
+.hero{position:relative;z-index:5;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+  padding:clamp(124px,17vh,180px) clamp(20px,5vw,90px) clamp(84px,12vh,120px);
+  background:
+    radial-gradient(120% 90% at 78% 12%,rgba(201,161,59,.16),transparent 55%),
+    radial-gradient(90% 70% at 15% 95%,rgba(201,161,59,.07),transparent 55%),
+    linear-gradient(180deg,var(--void) 0%,var(--void-2) 60%,var(--void) 100%)}
+.hero-copy{position:relative;z-index:6;max-width:min(94vw,820px);display:flex;flex-direction:column}
+.hero-copy>*{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.hero-copy>.in{opacity:1;transform:none}
+.hero-lockup-word{display:flex;flex-direction:column;line-height:1;margin-bottom:clamp(26px,5vh,52px)}
+.hero-lockup-word b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:.24em;font-size:clamp(22px,2.9vw,40px);color:var(--paper)}
+.hero-lockup-word i{font-style:normal;font-weight:400;letter-spacing:.34em;font-size:clamp(8px,1vw,12px);color:var(--gold-bright);margin-top:6px;opacity:.9}
+.hero-presents{font-family:var(--disp);font-weight:600;letter-spacing:.5em;font-size:clamp(11px,1.2vw,14px);color:var(--gold);margin-bottom:clamp(14px,2vh,22px)}
+.hero-title{font-family:'Roboto Slab',Georgia,serif;font-weight:800;font-size:clamp(52px,10vw,140px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;color:var(--paper);display:flex;flex-direction:column}
+.hero-title .word{display:flex;flex-wrap:nowrap;white-space:nowrap}
+.hero-title .ltr{display:inline-block;opacity:0;transform:translateY(.35em);transition:opacity .7s var(--ease),transform .7s var(--ease);text-shadow:0 0 60px rgba(201,161,59,.14)}
+.hero-title .ltr.in{opacity:1;transform:none}
+.hero-sub{margin-top:clamp(22px,3vh,34px);max-width:640px;font-family:'Lora',Georgia,serif;font-weight:400;font-size:clamp(17px,1.7vw,24px);line-height:1.5;color:var(--paper-dim)}
+.hero-sub b{color:var(--paper);font-weight:600}
+.hero-ladder{margin-top:clamp(16px,2.2vh,24px);font-family:'Lora',Georgia,serif;font-size:clamp(15px,1.5vw,21px);line-height:1.5;color:var(--paper-faint)}
+.hero-ladder b{font-style:normal;font-weight:600;color:var(--gold-bright)}
+.hero-ladder i{font-style:italic;color:var(--paper-dim)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:clamp(12px,1.4vw,18px);margin-top:clamp(30px,4.5vh,44px)}
+.hero-note{margin-top:clamp(22px,3vh,30px);max-width:600px;font-family:'Lora',Georgia,serif;font-size:clamp(13px,1.25vw,16px);line-height:1.55;color:var(--paper-faint)}
+.hero-note span{color:var(--paper);font-weight:600}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;z-index:6;opacity:.6}
+.scroll-hint span{font-family:var(--disp);letter-spacing:.34em;font-size:9px;color:var(--paper-dim)}
+.scroll-hint i{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:drop 1.9s var(--ease) infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* trust strip */
-.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));background:var(--ink);color:#fff}
-.trust div{padding:22px 16px;text-align:center;font-family:'Oswald',sans-serif;font-weight:500;
-  font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.07)}
-.trust div:last-child{border-right:0}
-.trust b{display:block;color:var(--accent);font-size:22px;font-weight:600;margin-bottom:2px}
+/* buttons */
+.btn{font-family:var(--disp);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;padding:18px 30px;border-radius:100px;display:inline-flex;align-items:center;gap:12px;transition:all .4s var(--ease)}
+.btn-primary{background:linear-gradient(100deg,var(--gold),var(--gold-hi));color:#160f00;box-shadow:0 8px 40px rgba(201,161,59,.28)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 54px rgba(201,161,59,.45)}
+.btn-ghost{border:1px solid rgba(255,255,255,.3);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
 
-/* sections */
-section{padding:clamp(56px,9vw,110px) clamp(16px,6vw,72px)}
-.sec-eyebrow{font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--brand);margin-bottom:10px}
-.sec-title{font-size:clamp(28px,4.4vw,44px);font-weight:700;line-height:1.1;margin-bottom:14px}
-.sec-kicker{color:var(--sub);max-width:44em;margin-bottom:44px;font-size:17px}
+/* shared */
+.sec-index{font-family:var(--disp);font-weight:600;letter-spacing:.3em;font-size:12px;color:var(--gold)}
+.sec-head{margin-bottom:clamp(40px,7vh,88px)}
+.sec-title{font-family:var(--cond);text-transform:uppercase;font-size:clamp(40px,7vw,110px);line-height:.92;margin:14px 0 0}
+.sec-kicker{margin-top:18px;max-width:540px;color:var(--paper-dim);font-weight:300;font-size:clamp(14px,1.3vw,18px);line-height:1.55}
 
-/* services */
-.services{background:var(--mist)}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
-.svc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px 26px;transition:.25s}
-.svc:hover{border-color:var(--brand);transform:translateY(-3px);box-shadow:0 14px 34px rgba(15,18,24,.08)}
-.svc-num{font-family:'Oswald',sans-serif;font-weight:600;color:var(--accent);font-size:14px;letter-spacing:.14em}
-.svc h3{font-size:19px;margin:8px 0 8px}
-.svc p{color:var(--sub);font-size:14.5px}
+/* stats */
+.stats{position:relative;z-index:10;background:var(--void);padding:clamp(90px,15vh,180px) clamp(20px,4vw,52px);border-top:1px solid var(--line)}
+.stats-inner{max-width:1300px;margin:0 auto}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(12px,1.2vw,18px)}
+.stat{background:linear-gradient(180deg,rgba(201,161,59,.045),transparent 60%);border:1px solid var(--line);border-radius:3px;
+  padding:clamp(26px,2.6vw,38px) clamp(24px,2.2vw,34px) clamp(28px,2.8vw,40px);display:flex;flex-direction:column;gap:16px;position:relative;
+  opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease),border-color .5s,background .5s}
+.stat.in{opacity:1;transform:none}
+.stat:hover{border-color:rgba(201,161,59,.55);background:linear-gradient(180deg,rgba(201,161,59,.09),transparent 60%)}
+.stat::before{content:"";position:absolute;left:-1px;top:-1px;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));border-radius:3px 3px 0 0;transition:width 1s var(--ease) .15s}
+.stat.in::before{width:calc(100% + 2px)}
+.stat-num{font-family:var(--cond);font-size:clamp(52px,5.4vw,88px);line-height:.88;color:var(--gold-bright);letter-spacing:-.01em}
+.stat-label{color:var(--paper-dim);font-weight:300;font-size:14px;line-height:1.55}
 
-/* why */
-.why-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:8px}
-.why{border-left:3px solid var(--accent);padding:6px 0 6px 22px}
-.why h3{font-size:18px;margin-bottom:6px}
-.why p{color:var(--sub);font-size:15px}
+/* services = pillars */
+.pillars{position:relative;z-index:10;overflow:hidden;padding:clamp(90px,16vh,190px) clamp(20px,4vw,52px);background:
+  radial-gradient(80% 60% at 70% 40%,rgba(201,161,59,.1),transparent 60%),var(--void-2)}
+.pillars-inner{position:relative;z-index:2;max-width:1300px;margin:0 auto}
+.pillar{display:grid;grid-template-columns:78px 1fr;align-items:start;gap:clamp(18px,3vw,50px);
+  padding:clamp(30px,4.5vh,52px) 0;border-top:1px solid var(--line);
+  opacity:0;transform:translateY(40px);transition:all .9s var(--ease)}
+.pillar:last-child{border-bottom:1px solid var(--line)}
+.pillar.in{opacity:1;transform:none}
+.pillar-rung{font-family:var(--cond);font-size:clamp(30px,3vw,52px);color:var(--paper-faint);transition:color .5s}
+.pillar:hover .pillar-rung{color:var(--gold)}
+.pillar-body h3{font-family:var(--cond);text-transform:uppercase;font-size:clamp(26px,3.8vw,54px);line-height:.95}
+.pillar-scope{margin-top:12px;max-width:60ch;color:var(--paper-dim);font-weight:300;font-size:15px;line-height:1.6}
+@media(max-width:760px){.pillar{grid-template-columns:44px 1fr}}
 
-/* cta band */
-.band{background:linear-gradient(120deg,var(--brand),color-mix(in srgb,var(--brand) 70%,#000));color:#fff;text-align:center}
-.band h2{font-size:clamp(28px,4.6vw,46px);margin-bottom:12px}
-.band p{color:rgba(255,255,255,.85);max-width:38em;margin:0 auto 30px;font-size:17px}
-.band .phone-big{font-family:'Oswald',sans-serif;font-size:clamp(26px,4.5vw,40px);font-weight:700;
-  color:var(--accent);text-decoration:none;display:inline-block;margin-bottom:24px;letter-spacing:.04em}
+/* why = install rows */
+.installed{position:relative;z-index:10;background:var(--void);padding:clamp(90px,15vh,180px) clamp(20px,4vw,52px);border-top:1px solid var(--line)}
+.installed-inner{max-width:1200px;margin:0 auto}
+.installed-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(38px,6vw,76px);line-height:1;color:var(--paper)}
+.installed-kicker{margin-top:clamp(16px,2.4vh,26px);max-width:60ch;font-family:'Lora',Georgia,serif;font-size:clamp(15px,1.5vw,20px);line-height:1.6;color:var(--paper-faint)}
+.install-list{margin-top:clamp(34px,5vh,54px);border-top:2px solid var(--gold)}
+.install-row{display:grid;grid-template-columns:clamp(180px,26%,300px) 1fr;gap:clamp(20px,4vw,60px);
+  padding:clamp(24px,3.4vh,38px) 0;border-bottom:1px solid var(--line);
+  opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.install-row.in{opacity:1;transform:none}
+.install-label{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(20px,2.2vw,29px);line-height:1.1;color:var(--gold-bright)}
+.install-desc{font-family:'Lora',Georgia,serif;font-weight:400;font-size:clamp(15px,1.5vw,19px);line-height:1.6;color:var(--paper-dim);max-width:66ch}
+.install-proof{margin-top:clamp(34px,5vh,52px);padding:clamp(24px,3.2vw,34px) clamp(26px,3.4vw,40px);border:1px solid var(--line);border-radius:3px;
+  background:linear-gradient(180deg,rgba(201,161,59,.06),transparent 70%);
+  font-family:'Lora',Georgia,serif;font-size:clamp(15px,1.5vw,20px);line-height:1.6;color:var(--paper-dim)}
+.install-proof b{color:var(--gold-bright);font-weight:600}
+@media(max-width:640px){.install-row{grid-template-columns:1fr;gap:8px}}
+
+/* finale */
+.finale{position:relative;z-index:10;background:radial-gradient(90% 70% at 50% 0%,rgba(201,161,59,.14),transparent 55%),var(--void);
+  padding:clamp(100px,18vh,210px) clamp(20px,4vw,52px) 0;border-top:1px solid var(--line)}
+.finale-inner{max-width:820px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.finale-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(40px,6.5vw,88px);line-height:1;color:var(--paper)}
+.finale-sub{max-width:720px;margin:clamp(22px,3vh,32px) auto 0;font-family:'Lora',Georgia,serif;font-size:clamp(16px,1.6vw,21px);line-height:1.65;color:var(--paper-dim)}
+.finale-sub b{color:var(--paper);font-weight:600}
+.finale-phone{margin-top:clamp(26px,4vh,40px);font-family:var(--cond);font-size:clamp(36px,6vw,72px);color:var(--gold-bright);letter-spacing:.02em;text-shadow:0 0 60px rgba(201,161,59,.25)}
+.finale-cta{display:flex;justify-content:center;margin-top:clamp(24px,3.5vh,36px)}
+.finale-note{margin-top:clamp(24px,4vh,36px);max-width:520px;font-size:clamp(12px,1.15vw,14px);line-height:1.55;color:var(--paper-faint)}
 
 /* footer */
-footer{background:var(--ink);color:#9aa0a9;padding:44px clamp(16px,6vw,72px);font-size:14px}
-.foot-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
-.foot-brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:19px;color:#fff;text-transform:uppercase}
-.foot-brand span{color:var(--accent)}
-footer a{color:#cfd3da;text-decoration:none}
-.foot-meta{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px}
-@media(max-width:640px){.nav{top:52px}.hero-inner{padding-top:90px}}
+.footer{max-width:1300px;margin:clamp(80px,13vh,150px) auto 0;padding:34px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:center}
+.footer-word{display:flex;flex-direction:column;line-height:1}
+.footer-word b{font-family:var(--disp);font-weight:600;letter-spacing:.24em;font-size:13px;color:var(--paper)}
+.footer-word i{font-style:normal;font-weight:400;letter-spacing:.28em;font-size:7.5px;color:var(--gold-bright);margin-top:4px;opacity:.9}
+.footer-meta{text-align:right;font-size:12px;line-height:1.75;color:var(--paper-faint)}
+@media(max-width:600px){.footer{flex-direction:column;align-items:flex-start}.footer-meta{text-align:left}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 
 <div class="ribbon">
-  <span><b>PREVIEW</b> — This site was built for Premier Roofing Company and isn't live yet.</span>
-  <span>Want it? <a href="mailto:banderson@eaglerevolution.com?subject=Claim this site — Premier Roofing Company">Claim it here</a></span>
+  <span><b>PREVIEW</b> Built for Premier Roofing Company — not live yet.</span>
+  <span>Want it? <a href="mailto:banderson@eaglerevolution.com?subject=Claim this site — Premier Roofing Company">Claim it</a></span>
 </div>
+
+<div id="grain" aria-hidden="true"></div>
 
 <header class="nav">
-  <a class="nav-brand" href="#">Premier <span>Roofing Company</span></a>
-  <a class="nav-phone" href="tel:5152767663">(515) 276-7663</a>
+  <a href="#" class="nav-word"><b>PREMIER</b><i>ROOFING COMPANY</i></a>
+  <a href="tel:5152767663" class="nav-cta">(515) 276-7663</a>
 </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Johnston, IA · Licensed &amp; Insured</div>
-    <h1>A roof done <em>right</em>, by people you can actually reach.</h1>
-    <p class="hero-sub">Storm damage, full replacements, and repairs across Johnston — inspected free, quoted straight, and built to outlast the weather.</p>
+<section id="hero" class="hero">
+  <div class="hero-copy">
+    <div class="hero-lockup-word"><b>PREMIER ROOFING COMPANY</b><i>JOHNSTON, IA · LICENSED &amp; INSURED</i></div>
+    <div class="hero-presents">ROOFING</div>
+    <h1 class="hero-title" id="heroTitle" style="font-size:clamp(40px,10vw,140px)" aria-label="DONE RIGHT"></h1>
+    <p class="hero-sub" id="heroSub">Storm damage, full replacements, and repairs across Johnston — inspected free, quoted straight, and <b>built to outlast the weather.</b></p>
+    <p class="hero-ladder"><b>Inspect</b> <i>it free.</i> <b>Quote</b> <i>it straight.</i> <b>Build</b> <i>it right.</i></p>
     <div class="hero-cta">
-      <a class="btn btn-solid" href="tel:5152767663">Call (515) 276-7663</a>
-      <a class="btn btn-line" href="#contact">Free Estimate</a>
+      <a href="tel:5152767663" class="btn btn-primary">Call (515) 276-7663 <i></i></a>
+      <a href="#estimate" class="btn btn-ghost">Free Estimate</a>
     </div>
-    <div class="hero-stars"><b>★★★★★</b><span>4.3 rating · 81 Google reviews</span></div>
+    <p class="hero-note"><span>4.3★ on Google, 81 reviews.</span> Our reputation is public — read what your neighbors say before you ever call.</p>
   </div>
+  <div class="scroll-hint" aria-hidden="true"><span>SCROLL</span><i></i></div>
 </section>
 
-<div class="trust">
-  <div><b>4.3</b>Google Rating</div>
-  <div><b>81</b>Homeowner Reviews</div>
-  <div><b>Local</b>Johnston Owned</div>
-  <div><b>Free</b>Estimates &amp; Inspections</div>
-</div>
-
-<section class="services" id="services">
-  <div class="sec-eyebrow">What we do</div>
-  <h2 class="sec-title">Roofing Services</h2>
-  <p class="sec-kicker">Every job quoted up front, built to spec, and cleaned up like we were never there.</p>
-  <div class="svc-grid">
-    <div class="svc"><div class="svc-num">01</div><h3>Roof Replacement</h3><p>Full tear-off and replacement with manufacturer-warrantied shingles, installed to spec.</p></div>
-<div class="svc"><div class="svc-num">02</div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing, and storm damage fixed fast, before they become ceilings.</p></div>
-<div class="svc"><div class="svc-num">03</div><h3>Storm & Hail Damage</h3><p>Free inspection after every storm. If there's a claim, we document it right.</p></div>
-<div class="svc"><div class="svc-num">04</div><h3>Insurance Claims</h3><p>We meet the adjuster, speak the language, and make sure nothing gets missed.</p></div>
-<div class="svc"><div class="svc-num">05</div><h3>Gutters & Downspouts</h3><p>Seamless gutters sized and pitched correctly, so water goes where it should.</p></div>
-<div class="svc"><div class="svc-num">06</div><h3>Siding & Exteriors</h3><p>Siding, soffit, and fascia that match the quality of the roof above them.</p></div>
-  </div>
-</section>
-
-<section id="why">
-  <div class="sec-eyebrow">Why Premier Roofing</div>
-  <h2 class="sec-title">Neighbors call us first for a reason</h2>
-  <div class="why-wrap">
-    <div class="why"><h3>4.3★ on Google (81 reviews)</h3><p>Our reputation is public. Read what Johnston homeowners say about our work before you ever call us.</p></div>
-    <div class="why"><h3>Straight answers, real quotes</h3><p>You get a clear scope and a firm number. No surprise line items, no games after the handshake.</p></div>
-    <div class="why"><h3>We show up</h3><p>On time for the estimate, on schedule for the job, and reachable when you call. That shouldn't be rare in this trade, but it is.</p></div>
-  </div>
-</section>
-
-<section class="band" id="contact">
-  <div class="sec-eyebrow" style="color:var(--accent)">Free estimate</div>
-  <h2>Get your roofing quote today</h2>
-  <p>Call or text and talk to a real person from Johnston — not a call center. We'll take a look and give you a straight answer, free.</p>
-  <a class="phone-big" href="tel:5152767663">(515) 276-7663</a><br/>
-  <a class="btn btn-solid" href="tel:5152767663">Call Now — Free Estimate</a>
-</section>
-
-<footer>
-  <div class="foot-grid">
-    <div>
-      <div class="foot-brand">Premier <span>Roofing Company</span></div>
-      <div style="margin-top:8px">Roofing · Johnston, IA and surrounding areas</div>
+<section class="stats">
+  <div class="stats-inner">
+    <div class="sec-head">
+      <span class="sec-index">01</span>
+      <h2 class="sec-title">The record speaks</h2>
+      <p class="sec-kicker">Numbers we didn't write ourselves — straight from Google reviews left by Johnston homeowners.</p>
     </div>
-    <div>
-      <div><a href="tel:5152767663">(515) 276-7663</a></div>
-      <div style="margin-top:4px">Licensed &amp; insured · Free estimates</div>
+    <div class="stats-grid">
+      <div class="stat" data-stat><div class="stat-num count" data-to="4.3" data-decimals="1">0.0</div><div class="stat-label">Google rating, out of 5 — written by real Johnston homeowners</div></div>
+<div class="stat" data-stat><div class="stat-num count" data-to="81">0</div><div class="stat-label">Public Google reviews. Read every one before you call.</div></div>
+<div class="stat" data-stat><div class="stat-num">$0</div><div class="stat-label">What the estimate costs you. Inspection included, no strings.</div></div>
+<div class="stat" data-stat><div class="stat-num">100%</div><div class="stat-label">Local. Based in Johnston — not a national franchise routing you to a call center.</div></div>
     </div>
   </div>
-  <div class="foot-meta">© 2026 Premier Roofing Company · Website preview by <a href="mailto:banderson@eaglerevolution.com">Eagle Digital</a></div>
-</footer>
+</section>
 
+<section class="pillars" id="services">
+  <div class="pillars-inner">
+    <div class="sec-head">
+      <span class="sec-index">02</span>
+      <h2 class="sec-title">What we do</h2>
+      <p class="sec-kicker">Every job quoted up front, built to spec, and cleaned up like we were never there.</p>
+    </div>
+    <div class="pillar" data-pillar><div class="pillar-rung">01</div><div class="pillar-body"><h3>Roof Replacement</h3><p class="pillar-scope">Full tear-off and replacement with manufacturer-warrantied shingles, installed to spec.</p></div></div>
+<div class="pillar" data-pillar><div class="pillar-rung">02</div><div class="pillar-body"><h3>Roof Repair</h3><p class="pillar-scope">Leaks, missing shingles, flashing, and storm damage fixed fast, before they become ceilings.</p></div></div>
+<div class="pillar" data-pillar><div class="pillar-rung">03</div><div class="pillar-body"><h3>Storm & Hail Damage</h3><p class="pillar-scope">Free inspection after every storm. If there's a claim, we document it right.</p></div></div>
+<div class="pillar" data-pillar><div class="pillar-rung">04</div><div class="pillar-body"><h3>Insurance Claims</h3><p class="pillar-scope">We meet the adjuster, speak the language, and make sure nothing gets missed.</p></div></div>
+<div class="pillar" data-pillar><div class="pillar-rung">05</div><div class="pillar-body"><h3>Gutters & Downspouts</h3><p class="pillar-scope">Seamless gutters sized and pitched correctly, so water goes where it should.</p></div></div>
+<div class="pillar" data-pillar><div class="pillar-rung">06</div><div class="pillar-body"><h3>Siding & Exteriors</h3><p class="pillar-scope">Siding, soffit, and fascia that match the quality of the roof above them.</p></div></div>
+  </div>
+</section>
+
+<section class="installed">
+  <div class="installed-inner">
+    <h2 class="installed-title">Why neighbors call us first</h2>
+    <p class="installed-kicker">Not a franchise. Not a call center. A local crew whose name is on every job.</p>
+    <div class="install-list">
+      <div class="install-row" data-card>
+        <div class="install-label">4.3★ on Google, 81 reviews</div>
+        <div class="install-desc">Our reputation is public. Read what Johnston homeowners say about our work before you ever pick up the phone.</div>
+      </div>
+      <div class="install-row" data-card>
+        <div class="install-label">Straight answers, real quotes</div>
+        <div class="install-desc">You get a clear scope and a firm number. No surprise line items, no games after the handshake.</div>
+      </div>
+      <div class="install-row" data-card>
+        <div class="install-label">We show up</div>
+        <div class="install-desc">On time for the estimate, on schedule for the job, reachable when you call. That shouldn't be rare in this trade — but it is.</div>
+      </div>
+    </div>
+    <p class="install-proof" data-card><b>Local and accountable.</b> We live and work in Johnston. Our name is our business — that's the warranty behind the warranty.</p>
+  </div>
+</section>
+
+<section id="estimate" class="finale">
+  <div class="finale-inner">
+    <span class="sec-index">03</span>
+    <h2 class="finale-title">Get your free estimate</h2>
+    <p class="finale-sub">Call or text and talk to a real person from Johnston — not a call center. We'll take a look and give you <b>a straight answer, free.</b></p>
+    <a class="finale-phone" href="tel:5152767663">(515) 276-7663</a>
+    <div class="finale-cta">
+      <a href="tel:5152767663" class="btn btn-primary">Call now — free estimate <i></i></a>
+    </div>
+    <p class="finale-note">Free inspections · Licensed &amp; insured · Johnston, IA and surrounding areas</p>
+  </div>
+  <footer class="footer">
+    <a href="#" class="footer-word"><b>PREMIER ROOFING COMPANY</b><i>ROOFING · JOHNSTON, IA</i></a>
+    <div class="footer-meta">
+      <div>© 2026 Premier Roofing Company · <a href="tel:5152767663">(515) 276-7663</a></div>
+      <div>Website preview by <a href="mailto:banderson@eaglerevolution.com">Eagle Digital</a></div>
+    </div>
+  </footer>
+</section>
+
+<script>
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+
+/* hero title letters */
+const HERO_TITLE='DONE RIGHT';
+const heroTitleEl=document.getElementById('heroTitle');
+const letterEls=[];
+HERO_TITLE.split(' ').forEach((word)=>{
+  const w=document.createElement('span');w.className='word';
+  word.split('').forEach(ch=>{
+    const s=document.createElement('span');s.className='ltr';s.textContent=ch;
+    w.appendChild(s);letterEls.push(s);
+  });
+  heroTitleEl.appendChild(w);
+});
+function startIntro(){
+  const lockup=document.querySelector('.hero-lockup-word');
+  const presents=document.querySelector('.hero-presents');
+  const sub=document.getElementById('heroSub');
+  const ladder=document.querySelector('.hero-ladder');
+  const cta=document.querySelector('.hero-cta');
+  const note=document.querySelector('.hero-note');
+  if(lockup)lockup.classList.add('in');
+  if(presents){presents.style.transitionDelay='.12s';presents.classList.add('in');}
+  heroTitleEl.classList.add('in');
+  letterEls.forEach((l,i)=>{l.style.transitionDelay=(0.28+i*0.045)+'s';l.classList.add('in');});
+  const after=0.28+letterEls.length*0.045;
+  [[sub,after+0.05],[ladder,after+0.18],[cta,after+0.30],[note,after+0.42]].forEach(([el,d])=>{
+    if(el){el.style.transitionDelay=d+'s';el.classList.add('in');}
+  });
+}
+
+/* count-up (supports decimals) */
+function animateCount(el){
+  const to=parseFloat(el.dataset.to);
+  const dec=parseInt(el.dataset.decimals||'0',10);
+  const suf=el.dataset.suffix||'';
+  const dur=1600;const start=performance.now();
+  function fmt(n){return n.toFixed(dec)+suf;}
+  function step(now){
+    const t=clamp((now-start)/dur,0,1);
+    const eased=1-Math.pow(1-t,3);
+    el.textContent=fmt(to*eased);
+    if(t<1)requestAnimationFrame(step);else el.textContent=fmt(to);
+  }
+  requestAnimationFrame(step);
+}
+
+/* reveal on scroll */
+function reveal(el){
+  if(el.classList.contains('in'))return;
+  el.classList.add('in');
+  if(el.matches('[data-stat]')){
+    const c=el.querySelector('.count');
+    if(c&&!c.dataset.done){c.dataset.done='1';animateCount(c);}
+  }
+}
+const revealEls=[...document.querySelectorAll('[data-stat],[data-pillar],[data-card],[data-reveal]')];
+const io=('IntersectionObserver'in window)?new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}});
+},{threshold:0.2,rootMargin:'0px 0px -8% 0px'}):null;
+if(io){revealEls.forEach(el=>io.observe(el));}else{revealEls.forEach(reveal);}
+function sweepReveal(){
+  const vh=window.innerHeight;
+  revealEls.forEach(el=>{
+    if(el.classList.contains('in'))return;
+    const r=el.getBoundingClientRect();
+    if(r.top<vh*0.9&&r.bottom>0)reveal(el);
+  });
+}
+window.addEventListener('scroll',sweepReveal,{passive:true});
+window.addEventListener('load',()=>setTimeout(sweepReveal,300));
+setTimeout(()=>revealEls.forEach(reveal),4000);
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches){revealEls.forEach(reveal);}
+
+startIntro();
+</script>
 </body>
 </html>
