@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Innov8 Home Solutions — Roofing in Waukee, IA</title>
+<meta name="description" content="Innov8 Home Solutions — Waukee's trusted roofing professionals. 4.9★ on Google (45 reviews) Free estimates: (515) 259-1397." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --brand:#1d3557;
+  --accent:#f4a825;
+  --ink:#141518; --paper:#ffffff; --mist:#f4f5f7; --line:#e4e6ea; --sub:#5b6068;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3,.btn{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+img{max-width:100%}
+a{color:inherit}
+
+/* preview ribbon */
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:99;background:var(--ink);color:#fff;
+  font-size:12.5px;padding:8px 16px;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
+.ribbon b{color:var(--accent);font-weight:600}
+.ribbon a{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent)}
+
+/* nav */
+.nav{position:sticky;top:34px;z-index:98;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(16px,5vw,56px)}
+.nav-brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(16px,2.4vw,22px);
+  text-transform:uppercase;letter-spacing:.03em;text-decoration:none}
+.nav-brand span{color:var(--brand)}
+.nav-phone{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;text-decoration:none;
+  background:var(--brand);color:#fff;padding:10px 20px;border-radius:6px;transition:.2s}
+.nav-phone:hover{background:var(--accent);color:var(--ink)}
+
+/* hero */
+.hero{margin-top:0;min-height:88vh;display:flex;align-items:center;position:relative;color:#fff;
+  background:linear-gradient(115deg,rgba(10,12,16,.94) 0%,rgba(10,12,16,.72) 55%,rgba(10,12,16,.45) 100%),
+  var(--brand);background-blend-mode:normal}
+.hero::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(1000px 500px at 85% 20%, color-mix(in srgb, var(--accent) 24%, transparent), transparent 60%);
+  pointer-events:none}
+.hero-inner{position:relative;z-index:1;padding:110px clamp(16px,6vw,72px) 80px;max-width:860px}
+.hero-eyebrow{font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.hero h1{font-size:clamp(38px,6.4vw,72px);line-height:1.04;font-weight:700;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:clamp(16px,2vw,19px);color:#d7dae0;max-width:34em;margin-bottom:34px;font-weight:300}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:16px;padding:16px 32px;
+  border-radius:6px;transition:.2s}
+.btn-solid{background:var(--accent);color:var(--ink)}
+.btn-solid:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn-line:hover{border-color:var(--accent);color:var(--accent)}
+.hero-stars{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);border-radius:99px;padding:9px 18px;font-size:14px}
+.hero-stars b{color:var(--accent);letter-spacing:.12em;font-size:15px}
+
+/* trust strip */
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));background:var(--ink);color:#fff}
+.trust div{padding:22px 16px;text-align:center;font-family:'Oswald',sans-serif;font-weight:500;
+  font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.07)}
+.trust div:last-child{border-right:0}
+.trust b{display:block;color:var(--accent);font-size:22px;font-weight:600;margin-bottom:2px}
+
+/* sections */
+section{padding:clamp(56px,9vw,110px) clamp(16px,6vw,72px)}
+.sec-eyebrow{font-family:'Oswald',sans-serif;font-weight:500;font-size:13px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+.sec-title{font-size:clamp(28px,4.4vw,44px);font-weight:700;line-height:1.1;margin-bottom:14px}
+.sec-kicker{color:var(--sub);max-width:44em;margin-bottom:44px;font-size:17px}
+
+/* services */
+.services{background:var(--mist)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px 26px;transition:.25s}
+.svc:hover{border-color:var(--brand);transform:translateY(-3px);box-shadow:0 14px 34px rgba(15,18,24,.08)}
+.svc-num{font-family:'Oswald',sans-serif;font-weight:600;color:var(--accent);font-size:14px;letter-spacing:.14em}
+.svc h3{font-size:19px;margin:8px 0 8px}
+.svc p{color:var(--sub);font-size:14.5px}
+
+/* why */
+.why-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:8px}
+.why{border-left:3px solid var(--accent);padding:6px 0 6px 22px}
+.why h3{font-size:18px;margin-bottom:6px}
+.why p{color:var(--sub);font-size:15px}
+
+/* cta band */
+.band{background:linear-gradient(120deg,var(--brand),color-mix(in srgb,var(--brand) 70%,#000));color:#fff;text-align:center}
+.band h2{font-size:clamp(28px,4.6vw,46px);margin-bottom:12px}
+.band p{color:rgba(255,255,255,.85);max-width:38em;margin:0 auto 30px;font-size:17px}
+.band .phone-big{font-family:'Oswald',sans-serif;font-size:clamp(26px,4.5vw,40px);font-weight:700;
+  color:var(--accent);text-decoration:none;display:inline-block;margin-bottom:24px;letter-spacing:.04em}
+
+/* footer */
+footer{background:var(--ink);color:#9aa0a9;padding:44px clamp(16px,6vw,72px);font-size:14px}
+.foot-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+.foot-brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:19px;color:#fff;text-transform:uppercase}
+.foot-brand span{color:var(--accent)}
+footer a{color:#cfd3da;text-decoration:none}
+.foot-meta{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);font-size:12.5px}
+@media(max-width:640px){.nav{top:52px}.hero-inner{padding-top:90px}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  <span><b>PREVIEW</b> — This site was built for Innov8 Home Solutions and isn't live yet.</span>
+  <span>Want it? <a href="mailto:banderson@eaglerevolution.com?subject=Claim this site — Innov8 Home Solutions">Claim it here</a></span>
+</div>
+
+<header class="nav">
+  <a class="nav-brand" href="#">Innov8 <span>Home Solutions</span></a>
+  <a class="nav-phone" href="tel:5152591397">(515) 259-1397</a>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Waukee, IA · Licensed &amp; Insured</div>
+    <h1>A roof done <em>right</em>, by people you can actually reach.</h1>
+    <p class="hero-sub">Storm damage, full replacements, and repairs across Waukee — inspected free, quoted straight, and built to outlast the weather.</p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="tel:5152591397">Call (515) 259-1397</a>
+      <a class="btn btn-line" href="#contact">Free Estimate</a>
+    </div>
+    <div class="hero-stars"><b>★★★★★</b><span>4.9 rating · 45 Google reviews</span></div>
+  </div>
+</section>
+
+<div class="trust">
+  <div><b>4.9</b>Google Rating</div>
+  <div><b>45</b>Homeowner Reviews</div>
+  <div><b>Local</b>Waukee Owned</div>
+  <div><b>Free</b>Estimates &amp; Inspections</div>
+</div>
+
+<section class="services" id="services">
+  <div class="sec-eyebrow">What we do</div>
+  <h2 class="sec-title">Roofing Services</h2>
+  <p class="sec-kicker">Every job quoted up front, built to spec, and cleaned up like we were never there.</p>
+  <div class="svc-grid">
+    <div class="svc"><div class="svc-num">01</div><h3>Roof Replacement</h3><p>Full tear-off and replacement with manufacturer-warrantied shingles, installed to spec.</p></div>
+<div class="svc"><div class="svc-num">02</div><h3>Roof Repair</h3><p>Leaks, missing shingles, flashing, and storm damage fixed fast, before they become ceilings.</p></div>
+<div class="svc"><div class="svc-num">03</div><h3>Storm & Hail Damage</h3><p>Free inspection after every storm. If there's a claim, we document it right.</p></div>
+<div class="svc"><div class="svc-num">04</div><h3>Insurance Claims</h3><p>We meet the adjuster, speak the language, and make sure nothing gets missed.</p></div>
+<div class="svc"><div class="svc-num">05</div><h3>Gutters & Downspouts</h3><p>Seamless gutters sized and pitched correctly, so water goes where it should.</p></div>
+<div class="svc"><div class="svc-num">06</div><h3>Siding & Exteriors</h3><p>Siding, soffit, and fascia that match the quality of the roof above them.</p></div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="sec-eyebrow">Why Innov8 Home</div>
+  <h2 class="sec-title">Neighbors call us first for a reason</h2>
+  <div class="why-wrap">
+    <div class="why"><h3>4.9★ on Google (45 reviews)</h3><p>Our reputation is public. Read what Waukee homeowners say about our work before you ever call us.</p></div>
+    <div class="why"><h3>Straight answers, real quotes</h3><p>You get a clear scope and a firm number. No surprise line items, no games after the handshake.</p></div>
+    <div class="why"><h3>We show up</h3><p>On time for the estimate, on schedule for the job, and reachable when you call. That shouldn't be rare in this trade, but it is.</p></div>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="sec-eyebrow" style="color:var(--accent)">Free estimate</div>
+  <h2>Get your roofing quote today</h2>
+  <p>Call or text and talk to a real person from Waukee — not a call center. We'll take a look and give you a straight answer, free.</p>
+  <a class="phone-big" href="tel:5152591397">(515) 259-1397</a><br/>
+  <a class="btn btn-solid" href="tel:5152591397">Call Now — Free Estimate</a>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Innov8 <span>Home Solutions</span></div>
+      <div style="margin-top:8px">Roofing · Waukee, IA and surrounding areas</div>
+    </div>
+    <div>
+      <div><a href="tel:5152591397">(515) 259-1397</a></div>
+      <div style="margin-top:4px">Licensed &amp; insured · Free estimates</div>
+    </div>
+  </div>
+  <div class="foot-meta">© 2026 Innov8 Home Solutions · Website preview by <a href="mailto:banderson@eaglerevolution.com">Eagle Digital</a></div>
+</footer>
+
+</body>
+</html>
