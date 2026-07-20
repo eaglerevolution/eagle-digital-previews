@@ -1,339 +1,411 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>First Fruits Construction — Roofing in Swan, IA</title>
-<meta name="description" content="First Fruits Construction — Swan's trusted roofing professionals. 4.9★ on Google, 56 reviews. Free estimates: (515) 218-1138." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@300;400;500;600;700&family=Roboto+Slab:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First Fruits Construction | Roofing Contractor in Swan, IA</title>
+<meta name="description" content="First Fruits Construction — Roofing in Swan, IA. 4.9★ on Google across 56 reviews. Free estimates: (515) 218-1138">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --void:#050505; --void-2:#0b0a08; --ink:#0f0d0a;
-  --gold:#C9A13B; --gold-bright:#E4C56B; --gold-hi:#F0DA96;
-  --paper:#F5F1E8; --paper-dim:#b8b2a4; --paper-faint:#6d6959;
-  --line:rgba(201,161,59,.22);
-  --cond:'Anton','Oswald','Arial Narrow',sans-serif;
-  --disp:'Oswald','Arial Narrow',sans-serif;
-  --body:'Inter',system-ui,sans-serif;
-  --ease:cubic-bezier(.16,1,.3,1);
+:root {
+  --blue: #1D4ED8; --blue-dark: #1636A8; --blue-deep: #0E2A7A;
+  --navy: #0A1633; --navy-soft: #101F45;
+  --red: #D7282F; --red-dark: #B01E24;
+  --ink: #0F172A; --body: #334155; --muted: #556072;
+  --line: #DBE3EF; --bg: #F6F8FC; --card: #FFFFFF; --gold: #E9B949;
+  --radius: 14px; --radius-lg: 22px;
+  --shadow-sm: 0 1px 3px rgba(10,22,51,.08);
+  --shadow: 0 10px 30px -12px rgba(10,22,51,.22);
+  --shadow-lg: 0 24px 60px -20px rgba(10,22,51,.35);
+  --font-display: "Lexend", system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --container: 1200px; --topbar-h: 40px; --nav-h: 76px;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--void);color:var(--paper);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-::selection{background:var(--gold);color:#000}
-a{color:inherit;text-decoration:none}
-
-/* preview ribbon */
-.ribbon{position:fixed;top:0;left:0;right:0;z-index:70;background:var(--void-2);border-bottom:1px solid var(--line);
-  color:var(--paper-dim);font-size:12px;padding:8px 14px;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;letter-spacing:.02em}
-.ribbon b{color:var(--gold-bright);font-weight:600;font-family:var(--disp);letter-spacing:.2em;font-size:11px}
-.ribbon a{color:var(--gold-bright);border-bottom:1px solid var(--gold);padding-bottom:1px}
-
-#grain{position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-
-/* nav */
-.nav{position:fixed;top:34px;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,52px)}
-.nav-word{display:flex;flex-direction:column;line-height:1}
-.nav-word b{font-family:var(--disp);font-weight:600;letter-spacing:.26em;font-size:13px;color:var(--paper)}
-.nav-word i{font-style:normal;font-weight:400;letter-spacing:.3em;font-size:8px;color:var(--gold-bright);margin-top:4px;opacity:.9}
-.nav-cta{font-family:var(--disp);font-weight:500;letter-spacing:.16em;font-size:11px;text-transform:uppercase;color:var(--paper);border:1px solid rgba(255,255,255,.6);padding:8px 16px;border-radius:100px;transition:.3s}
-.nav-cta:hover{border-color:var(--gold);color:var(--gold-bright)}
-
-/* hero */
-.hero{position:relative;z-index:5;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-  padding:clamp(124px,17vh,180px) clamp(20px,5vw,90px) clamp(84px,12vh,120px);
-  background:
-    radial-gradient(120% 90% at 78% 12%,rgba(201,161,59,.16),transparent 55%),
-    radial-gradient(90% 70% at 15% 95%,rgba(201,161,59,.07),transparent 55%),
-    linear-gradient(180deg,var(--void) 0%,var(--void-2) 60%,var(--void) 100%)}
-.hero-copy{position:relative;z-index:6;max-width:min(94vw,820px);display:flex;flex-direction:column}
-.hero-copy>*{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.hero-copy>.in{opacity:1;transform:none}
-.hero-lockup-word{display:flex;flex-direction:column;line-height:1;margin-bottom:clamp(26px,5vh,52px)}
-.hero-lockup-word b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:.24em;font-size:clamp(22px,2.9vw,40px);color:var(--paper)}
-.hero-lockup-word i{font-style:normal;font-weight:400;letter-spacing:.34em;font-size:clamp(8px,1vw,12px);color:var(--gold-bright);margin-top:6px;opacity:.9}
-.hero-presents{font-family:var(--disp);font-weight:600;letter-spacing:.5em;font-size:clamp(11px,1.2vw,14px);color:var(--gold);margin-bottom:clamp(14px,2vh,22px)}
-.hero-title{font-family:'Roboto Slab',Georgia,serif;font-weight:800;font-size:clamp(52px,10vw,140px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;color:var(--paper);display:flex;flex-direction:column}
-.hero-title .word{display:flex;flex-wrap:nowrap;white-space:nowrap}
-.hero-title .ltr{display:inline-block;opacity:0;transform:translateY(.35em);transition:opacity .7s var(--ease),transform .7s var(--ease);text-shadow:0 0 60px rgba(201,161,59,.14)}
-.hero-title .ltr.in{opacity:1;transform:none}
-.hero-sub{margin-top:clamp(22px,3vh,34px);max-width:640px;font-family:'Lora',Georgia,serif;font-weight:400;font-size:clamp(17px,1.7vw,24px);line-height:1.5;color:var(--paper-dim)}
-.hero-sub b{color:var(--paper);font-weight:600}
-.hero-ladder{margin-top:clamp(16px,2.2vh,24px);font-family:'Lora',Georgia,serif;font-size:clamp(15px,1.5vw,21px);line-height:1.5;color:var(--paper-faint)}
-.hero-ladder b{font-style:normal;font-weight:600;color:var(--gold-bright)}
-.hero-ladder i{font-style:italic;color:var(--paper-dim)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:clamp(12px,1.4vw,18px);margin-top:clamp(30px,4.5vh,44px)}
-.hero-note{margin-top:clamp(22px,3vh,30px);max-width:600px;font-family:'Lora',Georgia,serif;font-size:clamp(13px,1.25vw,16px);line-height:1.55;color:var(--paper-faint)}
-.hero-note span{color:var(--paper);font-weight:600}
-.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;z-index:6;opacity:.6}
-.scroll-hint span{font-family:var(--disp);letter-spacing:.34em;font-size:9px;color:var(--paper-dim)}
-.scroll-hint i{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:drop 1.9s var(--ease) infinite}
-@keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-
-/* buttons */
-.btn{font-family:var(--disp);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;padding:18px 30px;border-radius:100px;display:inline-flex;align-items:center;gap:12px;transition:all .4s var(--ease)}
-.btn-primary{background:linear-gradient(100deg,var(--gold),var(--gold-hi));color:#160f00;box-shadow:0 8px 40px rgba(201,161,59,.28)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 54px rgba(201,161,59,.45)}
-.btn-ghost{border:1px solid rgba(255,255,255,.3);color:var(--paper)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
-
-/* shared */
-.sec-index{font-family:var(--disp);font-weight:600;letter-spacing:.3em;font-size:12px;color:var(--gold)}
-.sec-head{margin-bottom:clamp(40px,7vh,88px)}
-.sec-title{font-family:var(--cond);text-transform:uppercase;font-size:clamp(40px,7vw,110px);line-height:.92;margin:14px 0 0}
-.sec-kicker{margin-top:18px;max-width:540px;color:var(--paper-dim);font-weight:300;font-size:clamp(14px,1.3vw,18px);line-height:1.55}
-
-/* stats */
-.stats{position:relative;z-index:10;background:var(--void);padding:clamp(90px,15vh,180px) clamp(20px,4vw,52px);border-top:1px solid var(--line)}
-.stats-inner{max-width:1300px;margin:0 auto}
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(12px,1.2vw,18px)}
-.stat{background:linear-gradient(180deg,rgba(201,161,59,.045),transparent 60%);border:1px solid var(--line);border-radius:3px;
-  padding:clamp(26px,2.6vw,38px) clamp(24px,2.2vw,34px) clamp(28px,2.8vw,40px);display:flex;flex-direction:column;gap:16px;position:relative;
-  opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease),border-color .5s,background .5s}
-.stat.in{opacity:1;transform:none}
-.stat:hover{border-color:rgba(201,161,59,.55);background:linear-gradient(180deg,rgba(201,161,59,.09),transparent 60%)}
-.stat::before{content:"";position:absolute;left:-1px;top:-1px;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-hi));border-radius:3px 3px 0 0;transition:width 1s var(--ease) .15s}
-.stat.in::before{width:calc(100% + 2px)}
-.stat-num{font-family:var(--cond);font-size:clamp(52px,5.4vw,88px);line-height:.88;color:var(--gold-bright);letter-spacing:-.01em}
-.stat-label{color:var(--paper-dim);font-weight:300;font-size:14px;line-height:1.55}
-
-/* services = pillars */
-.pillars{position:relative;z-index:10;overflow:hidden;padding:clamp(90px,16vh,190px) clamp(20px,4vw,52px);background:
-  radial-gradient(80% 60% at 70% 40%,rgba(201,161,59,.1),transparent 60%),var(--void-2)}
-.pillars-inner{position:relative;z-index:2;max-width:1300px;margin:0 auto}
-.pillar{display:grid;grid-template-columns:78px 1fr;align-items:start;gap:clamp(18px,3vw,50px);
-  padding:clamp(30px,4.5vh,52px) 0;border-top:1px solid var(--line);
-  opacity:0;transform:translateY(40px);transition:all .9s var(--ease)}
-.pillar:last-child{border-bottom:1px solid var(--line)}
-.pillar.in{opacity:1;transform:none}
-.pillar-rung{font-family:var(--cond);font-size:clamp(30px,3vw,52px);color:var(--paper-faint);transition:color .5s}
-.pillar:hover .pillar-rung{color:var(--gold)}
-.pillar-body h3{font-family:var(--cond);text-transform:uppercase;font-size:clamp(26px,3.8vw,54px);line-height:.95}
-.pillar-scope{margin-top:12px;max-width:60ch;color:var(--paper-dim);font-weight:300;font-size:15px;line-height:1.6}
-@media(max-width:760px){.pillar{grid-template-columns:44px 1fr}}
-
-/* why = install rows */
-.installed{position:relative;z-index:10;background:var(--void);padding:clamp(90px,15vh,180px) clamp(20px,4vw,52px);border-top:1px solid var(--line)}
-.installed-inner{max-width:1200px;margin:0 auto}
-.installed-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(38px,6vw,76px);line-height:1;color:var(--paper)}
-.installed-kicker{margin-top:clamp(16px,2.4vh,26px);max-width:60ch;font-family:'Lora',Georgia,serif;font-size:clamp(15px,1.5vw,20px);line-height:1.6;color:var(--paper-faint)}
-.install-list{margin-top:clamp(34px,5vh,54px);border-top:2px solid var(--gold)}
-.install-row{display:grid;grid-template-columns:clamp(180px,26%,300px) 1fr;gap:clamp(20px,4vw,60px);
-  padding:clamp(24px,3.4vh,38px) 0;border-bottom:1px solid var(--line);
-  opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.install-row.in{opacity:1;transform:none}
-.install-label{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(20px,2.2vw,29px);line-height:1.1;color:var(--gold-bright)}
-.install-desc{font-family:'Lora',Georgia,serif;font-weight:400;font-size:clamp(15px,1.5vw,19px);line-height:1.6;color:var(--paper-dim);max-width:66ch}
-.install-proof{margin-top:clamp(34px,5vh,52px);padding:clamp(24px,3.2vw,34px) clamp(26px,3.4vw,40px);border:1px solid var(--line);border-radius:3px;
-  background:linear-gradient(180deg,rgba(201,161,59,.06),transparent 70%);
-  font-family:'Lora',Georgia,serif;font-size:clamp(15px,1.5vw,20px);line-height:1.6;color:var(--paper-dim)}
-.install-proof b{color:var(--gold-bright);font-weight:600}
-@media(max-width:640px){.install-row{grid-template-columns:1fr;gap:8px}}
-
-/* finale */
-.finale{position:relative;z-index:10;background:radial-gradient(90% 70% at 50% 0%,rgba(201,161,59,.14),transparent 55%),var(--void);
-  padding:clamp(100px,18vh,210px) clamp(20px,4vw,52px) 0;border-top:1px solid var(--line)}
-.finale-inner{max-width:820px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
-.finale-title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(40px,6.5vw,88px);line-height:1;color:var(--paper)}
-.finale-sub{max-width:720px;margin:clamp(22px,3vh,32px) auto 0;font-family:'Lora',Georgia,serif;font-size:clamp(16px,1.6vw,21px);line-height:1.65;color:var(--paper-dim)}
-.finale-sub b{color:var(--paper);font-weight:600}
-.finale-phone{margin-top:clamp(26px,4vh,40px);font-family:var(--cond);font-size:clamp(36px,6vw,72px);color:var(--gold-bright);letter-spacing:.02em;text-shadow:0 0 60px rgba(201,161,59,.25)}
-.finale-cta{display:flex;justify-content:center;margin-top:clamp(24px,3.5vh,36px)}
-.finale-note{margin-top:clamp(24px,4vh,36px);max-width:520px;font-size:clamp(12px,1.15vw,14px);line-height:1.55;color:var(--paper-faint)}
-
-/* footer */
-.footer{max-width:1300px;margin:clamp(80px,13vh,150px) auto 0;padding:34px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:center}
-.footer-word{display:flex;flex-direction:column;line-height:1}
-.footer-word b{font-family:var(--disp);font-weight:600;letter-spacing:.24em;font-size:13px;color:var(--paper)}
-.footer-word i{font-style:normal;font-weight:400;letter-spacing:.28em;font-size:7.5px;color:var(--gold-bright);margin-top:4px;opacity:.9}
-.footer-meta{text-align:right;font-size:12px;line-height:1.75;color:var(--paper-faint)}
-@media(max-width:600px){.footer{flex-direction:column;align-items:flex-start}.footer-meta{text-align:left}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+body { font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.65; color: var(--body); background: var(--bg); overflow-x: hidden; }
+img, video { max-width: 100%; display: block; }
+h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); line-height: 1.15; letter-spacing: -0.015em; }
+h1 { font-size: clamp(2.3rem, 5vw, 3.6rem); font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+.section { padding: 88px 0; }
+.section--navy { background: var(--navy); }
+.section--navy h2, .section--navy h3 { color: #fff; }
+.section--navy p { color: #C4CEE4; }
+.section--white { background: #fff; }
+.accent { color: var(--blue); }
+.kicker { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: .8rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+.kicker::before { content: ""; width: 34px; height: 3px; background: var(--red); border-radius: 2px; }
+.section-head { max-width: 720px; margin: 0 auto 52px; text-align: center; }
+.section-head p { margin-top: 14px; font-size: 1.125rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-display); font-weight: 600; font-size: 1rem; padding: 15px 30px; border-radius: 999px; border: 2px solid transparent; cursor: pointer; text-decoration: none !important; transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease; min-height: 48px; }
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn--primary { background: var(--blue); color: #fff; box-shadow: 0 10px 24px -10px rgba(29,78,216,.55); }
+.btn--primary:hover { background: var(--blue-dark); }
+.btn--red { background: var(--red); color: #fff; box-shadow: 0 10px 24px -10px rgba(215,40,47,.55); }
+.btn--red:hover { background: var(--red-dark); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn--ghost:hover { border-color: var(--blue); color: var(--blue); }
+.btn--ghost-light { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.35); }
+.btn--ghost-light:hover { background: rgba(255,255,255,.16); }
+.btn--lg { padding: 18px 38px; font-size: 1.08rem; }
+.preview-ribbon { background: var(--ink); color: #C4CEE4; text-align: center; font-size: .875rem; padding: 9px 16px; }
+.preview-ribbon strong { color: var(--gold); font-family: var(--font-display); letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; margin-right: 6px; }
+.preview-ribbon a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.topbar { background: var(--navy); color: #C4CEE4; font-size: .875rem; height: var(--topbar-h); display: flex; align-items: center; }
+.topbar .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.topbar__group { display: flex; align-items: center; gap: 22px; }
+.topbar a { color: #fff; font-weight: 600; }
+.topbar__item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+.topbar__item svg { width: 15px; height: 15px; color: var(--gold); flex: none; }
+@media (max-width: 720px) { .topbar__hide-sm { display: none; } }
+.promo { background: linear-gradient(90deg, var(--red), #E4444A); color: #fff; text-align: center; font-weight: 600; font-size: .9375rem; padding: 9px 16px; }
+.promo a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.header .container { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); gap: 16px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none !important; flex: none; }
+.brand__icon { width: 42px; height: 42px; border-radius: 12px; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; flex: none; }
+.brand__icon svg { width: 24px; height: 24px; }
+.brand__name { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: var(--ink); line-height: 1.1; }
+.brand__tag { font-family: var(--font-display); font-size: .66rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--blue); }
+.nav { display: flex; align-items: center; gap: 4px; }
+.nav a.nav__link { font-family: var(--font-display); font-weight: 500; font-size: .95rem; color: var(--ink); padding: 10px 13px; border-radius: 10px; display: inline-flex; align-items: center; gap: 6px; text-decoration: none !important; transition: background .15s ease, color .15s ease; }
+.nav a.nav__link:hover { background: #EDF2FD; color: var(--blue); }
+.header__cta { display: flex; align-items: center; gap: 12px; }
+.header__phone { font-family: var(--font-display); font-weight: 700; color: var(--ink); white-space: nowrap; }
+.header__phone:hover { color: var(--blue); text-decoration: none; }
+.header .btn { padding: 12px 24px; }
+@media (max-width: 1080px) { .nav { display: none; } .header__cta .header__phone { display: none; } }
+@media (max-width: 480px) { .header__cta .btn span { display: none; } .header__cta .btn { padding: 12px 16px; } }
+.hero { position: relative; color: #fff; min-height: min(88vh, 860px); display: flex; align-items: center; overflow: hidden;
+  background: radial-gradient(1000px 400px at 85% -10%, rgba(29,78,216,.35), transparent 60%),
+              radial-gradient(700px 300px at 10% 110%, rgba(215,40,47,.18), transparent 60%),
+              var(--navy); }
+.hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; padding-top: 72px; padding-bottom: 72px; }
+.hero__badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 7px 16px; font-family: var(--font-display); font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 22px; }
+.hero__badge::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+.hero h1 { color: #fff; margin-bottom: 20px; }
+.hero h1 .accent { color: #7DA2FF; }
+.hero__sub { font-size: 1.2rem; color: #D4DCF0; max-width: 560px; margin-bottom: 26px; }
+.hero__points { list-style: none; display: grid; gap: 10px; margin-bottom: 32px; }
+.hero__points li { display: flex; align-items: center; gap: 11px; font-weight: 600; color: #EAF0FF; }
+.hero__points svg { width: 20px; height: 20px; color: var(--gold); flex: none; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 40px; }
+.hero__stats { display: flex; flex-wrap: wrap; gap: 36px; border-top: 1px solid rgba(255,255,255,.2); padding-top: 26px; }
+.hero__stat .num { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; color: #fff; }
+.hero__stat .lbl { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: #9FB0D6; }
+.lead-card { background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: 30px 28px; color: var(--body); border-top: 6px solid var(--red); }
+.lead-card h2 { font-size: 1.45rem; margin-bottom: 4px; }
+.lead-card__sub { font-size: .95rem; color: var(--muted); margin-bottom: 18px; }
+.lead-card__offer { background: #FDECEC; color: var(--red-dark); border-radius: 10px; font-weight: 700; font-size: .95rem; text-align: center; padding: 9px 12px; margin-bottom: 18px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-grid .full { grid-column: 1 / -1; }
+.field label { display: block; font-family: var(--font-display); font-size: .8rem; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
+.field input, .field select, .field textarea { width: 100%; font: inherit; color: var(--ink); border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; background: #FAFBFE; min-height: 48px; transition: border-color .15s ease; }
+.field textarea { min-height: 100px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); outline: none; box-shadow: 0 0 0 3px rgba(29,78,216,.15); }
+.lead-card .btn { width: 100%; margin-top: 16px; }
+.lead-card__trust { display: flex; justify-content: center; gap: 16px; margin-top: 14px; font-size: .8rem; color: var(--muted); flex-wrap: wrap; }
+.lead-card__trust span { display: inline-flex; align-items: center; gap: 5px; }
+.lead-card__trust svg { width: 14px; height: 14px; color: var(--blue); }
+@media (max-width: 980px) { .hero .container { grid-template-columns: 1fr; gap: 40px; } .hero { min-height: 0; } }
+.trust-strip { background: #fff; border-bottom: 1px solid var(--line); padding: 26px 0; }
+.trust-strip .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px 46px; }
+.trust-strip__item { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 600; font-size: .9rem; color: var(--muted); }
+.trust-strip__item svg { width: 20px; height: 20px; color: var(--blue); }
+.trust-strip__item--stars svg { color: var(--gold); }
+.grid { display: grid; gap: 24px; }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1000px) { .grid--3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .grid--3 { grid-template-columns: 1fr; } }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 30px 28px; box-shadow: var(--shadow-sm); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; display: flex; flex-direction: column; }
+a.card { text-decoration: none !important; color: inherit; }
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: #B9C8EA; }
+.card__icon { width: 54px; height: 54px; border-radius: 14px; background: #EAF0FE; color: var(--blue); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; flex: none; }
+.card__icon svg { width: 26px; height: 26px; }
+.card h3 { margin-bottom: 10px; font-size: 1.22rem; }
+.card p { font-size: .98rem; }
+.card__link { margin-top: auto; padding-top: 18px; font-family: var(--font-display); font-weight: 600; font-size: .88rem; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); display: inline-flex; align-items: center; gap: 8px; }
+.card__link svg { width: 16px; height: 16px; transition: transform .18s ease; }
+.card:hover .card__link svg { transform: translateX(4px); }
+.card ul.ticks { list-style: none; margin: 6px 0 4px; display: grid; gap: 7px; }
+.card ul.ticks li { display: flex; gap: 9px; align-items: center; font-size: .95rem; color: var(--body); }
+.card ul.ticks svg { width: 16px; height: 16px; color: var(--blue); flex: none; }
+.stats-band { background: var(--navy); color: #fff; padding: 64px 0; }
+.stats-band .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; }
+.stats-band .num { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; color: #fff; }
+.stats-band .num .accent { color: #7DA2FF; }
+.stats-band .lbl { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: #9FB0D6; margin-top: 6px; }
+@media (max-width: 760px) { .stats-band .container { grid-template-columns: repeat(2, 1fr); } }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+@media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 36px; } }
+.value-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0; }
+.value-chips span { border: 1.5px solid #C7D4F2; color: var(--blue-deep); background: #F2F6FE; border-radius: 999px; padding: 8px 18px; font-family: var(--font-display); font-weight: 600; font-size: .88rem; }
+.stat-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+.stat-tiles .tile { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 20px 18px; }
+.stat-tiles .num { font-family: var(--font-display); font-weight: 800; font-size: 1.9rem; color: var(--blue); }
+.stat-tiles .lbl { font-size: .88rem; color: var(--muted); margin-top: 4px; }
+@media (max-width: 640px) { .stat-tiles { grid-template-columns: 1fr; } }
+.review-band { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: clamp(32px, 5vw, 52px); text-align: center; max-width: 780px; margin: 0 auto; }
+.review-band__stars { color: var(--gold); display: flex; justify-content: center; gap: 6px; margin-bottom: 16px; }
+.review-band__stars svg { width: 30px; height: 30px; }
+.review-band h2 { margin-bottom: 8px; }
+.review-band p { font-size: 1.1rem; }
+.cta-banner { background: linear-gradient(115deg, var(--blue-deep), var(--blue)); border-radius: var(--radius-lg); color: #fff; padding: clamp(36px, 6vw, 64px); display: grid; grid-template-columns: 1.4fr 1fr; gap: 36px; align-items: center; position: relative; overflow: hidden; }
+.cta-banner::after { content: ""; position: absolute; right: -80px; top: -80px; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,.07); }
+.cta-banner h2 { color: #fff; margin-bottom: 12px; }
+.cta-banner p { color: #D4DCF0; }
+.cta-banner__actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: flex-end; position: relative; z-index: 1; }
+@media (max-width: 860px) { .cta-banner { grid-template-columns: 1fr; } .cta-banner__actions { justify-content: flex-start; } }
+.footer { background: #F7F9FC; color: var(--body); padding: 72px 0 0; font-size: .95rem; border-top: 1px solid var(--line); }
+.footer a { color: var(--body); }
+.footer a:hover { color: var(--blue); }
+.footer__grid { display: grid; grid-template-columns: 1.3fr 1fr 1.1fr; gap: 56px 60px; padding-bottom: 52px; }
+.footer__brand-row { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.footer__brand-row .name { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--ink); }
+.footer__tagline { font-family: var(--font-display); font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
+.footer h4 { color: var(--ink); font-size: .85rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+.footer h4 svg { width: 16px; height: 16px; color: var(--blue); }
+.footer ul { list-style: none; display: grid; gap: 13px; }
+.footer__svc li { display: flex; gap: 10px; align-items: center; }
+.footer__svc svg { width: 17px; height: 17px; color: var(--muted); flex: none; }
+.footer__contact li { display: flex; gap: 10px; align-items: flex-start; }
+.footer__contact svg { width: 17px; height: 17px; color: var(--blue); flex: none; margin-top: 4px; }
+.footer__bottom { border-top: 1px solid var(--line); padding: 22px 0; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; justify-content: space-between; font-size: .85rem; color: var(--muted); }
+@media (max-width: 1060px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .footer__grid { grid-template-columns: 1fr; } }
+.callbar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1200; background: #fff; border-top: 1px solid var(--line); padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); grid-template-columns: 1fr 1fr; gap: 10px; }
+.callbar .btn { padding: 13px 10px; font-size: .95rem; width: 100%; }
+@media (max-width: 760px) { .callbar { display: grid; } body { padding-bottom: 74px; } }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .55s ease, transform .55s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
 </style>
 </head>
 <body>
 
-<div class="ribbon">
-  <span><b>PREVIEW</b> Built for First Fruits Construction — not live yet.</span>
-  <span>Want it? <a href="mailto:banderson@eaglerevolution.com?subject=Claim this site — First Fruits Construction">Claim it</a></span>
+<div class="preview-ribbon"><strong>Preview</strong> This site was built for First Fruits Construction and isn't live yet. Want it? <a href="mailto:banderson@eaglerevolution.com?subject=Claim this site — First Fruits Construction">Claim it here</a></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar__group">
+      <span class="topbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> Licensed &amp; Insured</span>
+      <span class="topbar__item topbar__hide-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Swan, IA &amp; Surrounding Areas</span>
+    </div>
+    <div class="topbar__group">
+      <span class="topbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 13 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"/></svg> <a href="tel:5152181138">(515) 218-1138</a></span>
+    </div>
+  </div>
+</div>
+<div class="promo">Free estimates — book this week and get on the schedule first. <a href="#estimate">Get yours now</a></div>
+<header class="header">
+  <div class="container">
+    <a class="brand" href="#" aria-label="First Fruits Construction — home">
+      <span class="brand__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg></span>
+      <span><span class="brand__name">First Fruits Construction</span><br><span class="brand__tag">Roofing · Swan, IA</span></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav__link" href="#">Home</a>
+      <a class="nav__link" href="#services">Services</a>
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#reviews">Reviews</a>
+      <a class="nav__link" href="#estimate">Contact</a>
+    </nav>
+    <div class="header__cta">
+      <a class="header__phone" href="tel:5152181138">(515) 218-1138</a>
+      <a class="btn btn--primary" href="#estimate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 13 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"/></svg><span>Contact Us</span></a>
+    </div>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="hero__badge">Locally Owned &amp; Operated</span>
+      <h1>Roofing <span class="accent">Done Right The First Time</span></h1>
+      <p class="hero__sub">Roof replacements, repairs, and storm restoration for Swan homeowners — premium materials, straight pricing, and a crew that shows up.</p>
+      <ul class="hero__points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Free inspections &amp; exact quotes, up front</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Licensed, insured &amp; local to Swan</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> 4.9★ on Google across 56 reviews</li>
+      </ul>
+      <div class="hero__actions">
+        <a class="btn btn--red btn--lg" href="#estimate">Book a FREE Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost-light btn--lg" href="tel:5152181138">Call (515) 218-1138</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat"><div class="num">4.9★</div><div class="lbl">Google Rating</div></div>
+<div class="hero__stat"><div class="num">56</div><div class="lbl">Google Reviews</div></div>
+<div class="hero__stat"><div class="num">$0</div><div class="lbl">Estimate Cost</div></div>
+      </div>
+    </div>
+    <div class="lead-card">
+      <h2>Schedule Your <span style="color:var(--red)">FREE</span> Estimate</h2>
+      <p class="lead-card__sub">Fast response. Exact quote. Zero pressure.</p>
+      <div class="lead-card__offer">Free inspection included with every estimate</div>
+      <form data-lead>
+        <div class="form-grid">
+          <div class="field"><label for="fn">First Name *</label><input id="fn" name="First Name" type="text" required></div>
+          <div class="field"><label for="ln">Last Name *</label><input id="ln" name="Last Name" type="text" required></div>
+          <div class="field"><label for="ph">Phone *</label><input id="ph" name="Phone" type="tel" required></div>
+          <div class="field"><label for="em">Email *</label><input id="em" name="Email" type="email" required></div>
+          <div class="field full"><label for="sv">Service Needed</label>
+            <select id="sv" name="Service"><option value="">Select a service…</option><option>Roof Replacement</option><option>Roof Repair</option><option>Storm & Hail Damage</option><option>Insurance Claims</option><option>Gutters & Protection</option><option>Siding, Soffit & Fascia</option><option>Something else</option></select></div>
+          <div class="field full"><label for="ms">Tell us about your project</label><textarea id="ms" name="Message" rows="3"></textarea></div>
+        </div>
+        <button class="btn btn--red btn--lg" type="submit">Schedule My Free Estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+        <div class="lead-card__trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> No Obligation</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Free Estimate</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Licensed &amp; Insured</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="container">
+    <span class="trust-strip__item trust-strip__item--stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg> 4.9 on Google (56 reviews)</span>
+    <span class="trust-strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg> Licensed &amp; Insured</span>
+    <span class="trust-strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Swan Local</span>
+    <span class="trust-strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Free Estimates</span>
+  </div>
 </div>
 
-<div id="grain" aria-hidden="true"></div>
-
-<header class="nav">
-  <a href="#" class="nav-word"><b>FIRST</b><i>FRUITS CONSTRUCTION</i></a>
-  <a href="tel:5152181138" class="nav-cta">(515) 218-1138</a>
-</header>
-
-<section id="hero" class="hero">
-  <div class="hero-copy">
-    <div class="hero-lockup-word"><b>FIRST FRUITS CONSTRUCTION</b><i>SWAN, IA · LICENSED &amp; INSURED</i></div>
-    <div class="hero-presents">ROOFING</div>
-    <h1 class="hero-title" id="heroTitle" style="font-size:clamp(40px,10vw,140px)" aria-label="DONE RIGHT"></h1>
-    <p class="hero-sub" id="heroSub">Storm damage, full replacements, and repairs across Swan — inspected free, quoted straight, and <b>built to outlast the weather.</b></p>
-    <p class="hero-ladder"><b>Inspect</b> <i>it free.</i> <b>Quote</b> <i>it straight.</i> <b>Build</b> <i>it right.</i></p>
-    <div class="hero-cta">
-      <a href="tel:5152181138" class="btn btn-primary">Call (515) 218-1138 <i></i></a>
-      <a href="#estimate" class="btn btn-ghost">Free Estimate</a>
-    </div>
-    <p class="hero-note"><span>4.9★ on Google, 56 reviews.</span> Our reputation is public — read what your neighbors say before you ever call.</p>
-  </div>
-  <div class="scroll-hint" aria-hidden="true"><span>SCROLL</span><i></i></div>
-</section>
-
-<section class="stats">
-  <div class="stats-inner">
-    <div class="sec-head">
-      <span class="sec-index">01</span>
-      <h2 class="sec-title">The record speaks</h2>
-      <p class="sec-kicker">Numbers we didn't write ourselves — straight from Google reviews left by Swan homeowners.</p>
-    </div>
-    <div class="stats-grid">
-      <div class="stat" data-stat><div class="stat-num count" data-to="4.9" data-decimals="1">0.0</div><div class="stat-label">Google rating, out of 5 — written by real Swan homeowners</div></div>
-<div class="stat" data-stat><div class="stat-num count" data-to="56">0</div><div class="stat-label">Public Google reviews. Read every one before you call.</div></div>
-<div class="stat" data-stat><div class="stat-num">$0</div><div class="stat-label">What the estimate costs you. Inspection included, no strings.</div></div>
-<div class="stat" data-stat><div class="stat-num">100%</div><div class="stat-label">Local. Based in Swan — not a national franchise routing you to a call center.</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="pillars" id="services">
-  <div class="pillars-inner">
-    <div class="sec-head">
-      <span class="sec-index">02</span>
-      <h2 class="sec-title">What we do</h2>
-      <p class="sec-kicker">Every job quoted up front, built to spec, and cleaned up like we were never there.</p>
-    </div>
-    <div class="pillar" data-pillar><div class="pillar-rung">01</div><div class="pillar-body"><h3>Roof Replacement</h3><p class="pillar-scope">Full tear-off and replacement with manufacturer-warrantied shingles, installed to spec.</p></div></div>
-<div class="pillar" data-pillar><div class="pillar-rung">02</div><div class="pillar-body"><h3>Roof Repair</h3><p class="pillar-scope">Leaks, missing shingles, flashing, and storm damage fixed fast, before they become ceilings.</p></div></div>
-<div class="pillar" data-pillar><div class="pillar-rung">03</div><div class="pillar-body"><h3>Storm & Hail Damage</h3><p class="pillar-scope">Free inspection after every storm. If there's a claim, we document it right.</p></div></div>
-<div class="pillar" data-pillar><div class="pillar-rung">04</div><div class="pillar-body"><h3>Insurance Claims</h3><p class="pillar-scope">We meet the adjuster, speak the language, and make sure nothing gets missed.</p></div></div>
-<div class="pillar" data-pillar><div class="pillar-rung">05</div><div class="pillar-body"><h3>Gutters & Downspouts</h3><p class="pillar-scope">Seamless gutters sized and pitched correctly, so water goes where it should.</p></div></div>
-<div class="pillar" data-pillar><div class="pillar-rung">06</div><div class="pillar-body"><h3>Siding & Exteriors</h3><p class="pillar-scope">Siding, soffit, and fascia that match the quality of the roof above them.</p></div></div>
-  </div>
-</section>
-
-<section class="installed">
-  <div class="installed-inner">
-    <h2 class="installed-title">Why neighbors call us first</h2>
-    <p class="installed-kicker">Not a franchise. Not a call center. A local crew whose name is on every job.</p>
-    <div class="install-list">
-      <div class="install-row" data-card>
-        <div class="install-label">4.9★ on Google, 56 reviews</div>
-        <div class="install-desc">Our reputation is public. Read what Swan homeowners say about our work before you ever pick up the phone.</div>
+<section class="section" id="about">
+  <div class="container">
+    <div class="split">
+      <div class="reveal">
+        <span class="kicker">Local. Accountable. Proven.</span>
+        <h2>Swan's Roofing Crew, <span class="accent">Not a Call Center</span></h2>
+        <p style="margin-top:16px">First Fruits Construction is a local roofing company serving Swan and the surrounding area. Our name is on every job we do — and our reputation is public. Straight quotes, clean job sites, and work that holds up long after we're gone.</p>
+        <div class="value-chips">
+          <span>Customer First</span><span>Integrity</span><span>Craftsmanship</span><span>Straight Pricing</span>
+        </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#estimate">Get Free Estimate <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="tel:5152181138">Call (515) 218-1138</a>
+        </div>
       </div>
-      <div class="install-row" data-card>
-        <div class="install-label">Straight answers, real quotes</div>
-        <div class="install-desc">You get a clear scope and a firm number. No surprise line items, no games after the handshake.</div>
-      </div>
-      <div class="install-row" data-card>
-        <div class="install-label">We show up</div>
-        <div class="install-desc">On time for the estimate, on schedule for the job, reachable when you call. That shouldn't be rare in this trade — but it is.</div>
+      <div class="reveal">
+        <div class="stat-tiles" style="grid-template-columns:1fr 1fr; margin-top:0">
+          <div class="tile"><div class="num">4.9★</div><div class="lbl">Google rating</div></div>
+<div class="tile"><div class="num">56</div><div class="lbl">Public reviews</div></div>
+<div class="tile"><div class="num">$0</div><div class="lbl">What the estimate costs</div></div>
+<div class="tile"><div class="num">Local</div><div class="lbl">Based in Swan, IA</div></div>
+        </div>
       </div>
     </div>
-    <p class="install-proof" data-card><b>Local and accountable.</b> We live and work in Swan. Our name is our business — that's the warranty behind the warranty.</p>
   </div>
 </section>
 
-<section id="estimate" class="finale">
-  <div class="finale-inner">
-    <span class="sec-index">03</span>
-    <h2 class="finale-title">Get your free estimate</h2>
-    <p class="finale-sub">Call or text and talk to a real person from Swan — not a call center. We'll take a look and give you <b>a straight answer, free.</b></p>
-    <a class="finale-phone" href="tel:5152181138">(515) 218-1138</a>
-    <div class="finale-cta">
-      <a href="tel:5152181138" class="btn btn-primary">Call now — free estimate <i></i></a>
+<section class="section section--white" id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>Everything Your Home Needs, <span class="accent">One Trusted Crew</span></h2>
+      <p>One standard: done right the first time.</p>
     </div>
-    <p class="finale-note">Free inspections · Licensed &amp; insured · Swan, IA and surrounding areas</p>
+    <div class="grid grid--3">
+      <a class="card reveal" href="#estimate"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg></div><h3>Roof Replacement</h3><p>Long-lasting, beautiful roofing systems that protect your home and raise its value.</p><ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Expert installation</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Storm & wind resistant</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Manufacturer-warrantied shingles</li></ul><span class="card__link">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a>
+<a class="card reveal" href="#estimate"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Roof Repair</h3><p>Leaks, missing shingles, and flashing fixed fast — before they become ceilings.</p><ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Fast response</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Honest assessments</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Repair before replace</li></ul><span class="card__link">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a>
+<a class="card reveal" href="#estimate"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8a5 5 0 0 0-10 0 4 4 0 0 0-3 4c0 2.2 1.8 4 4 4h10a4 4 0 0 0 0-8h-1Z" transform="translate(0,-1)"/><path d="m13 13-2 4h3l-2 4"/></svg></div><h3>Storm & Hail Damage</h3><p>Free inspection after every storm, with the damage documented right.</p><ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Free storm inspections</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Full photo documentation</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Emergency tarping</li></ul><span class="card__link">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a>
+<a class="card reveal" href="#estimate"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Insurance Claims</h3><p>We meet the adjuster and speak the language, so nothing gets missed.</p><ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Adjuster meetings</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Claim documentation</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Start-to-finish help</li></ul><span class="card__link">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a>
+<a class="card reveal" href="#estimate"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3"/><path d="M5 9c0-1.7 3.1-3 7-3s7 1.3 7 3-3.1 3-7 3-7-1.3-7-3Z"/><path d="M12 14v7"/><path d="M9 18l3 3 3-3"/></svg></div><h3>Gutters & Protection</h3><p>Seamless gutters and guards that manage rain and protect your foundation.</p><ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Seamless fabrication</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Gutter guards</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Custom sizing & colors</li></ul><span class="card__link">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a>
+<a class="card reveal" href="#estimate"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 10h18M3 14h18M3 18h18"/><path d="M3 6l2-2h14l2 2"/></svg></div><h3>Siding, Soffit & Fascia</h3><p>Exterior details that shield your home and finish the look.</p><ul class="ticks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Material & color variety</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Weather protection</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Seamless trim details</li></ul><span class="card__link">Get a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></a>
+    </div>
   </div>
-  <footer class="footer">
-    <a href="#" class="footer-word"><b>FIRST FRUITS CONSTRUCTION</b><i>ROOFING · SWAN, IA</i></a>
-    <div class="footer-meta">
-      <div>© 2026 First Fruits Construction · <a href="tel:5152181138">(515) 218-1138</a></div>
-      <div>Website preview by <a href="mailto:banderson@eaglerevolution.com">Eagle Digital</a></div>
-    </div>
-  </footer>
 </section>
 
+<div class="stats-band">
+  <div class="container">
+    <div><div class="num">4.9<span class="accent">★</span></div><div class="lbl">Google Rating</div></div>
+<div><div class="num">56<span class="accent">+</span></div><div class="lbl">Homeowner Reviews</div></div>
+<div><div class="num">$0</div><div class="lbl">Estimate &amp; Inspection</div></div>
+<div><div class="num">100<span class="accent">%</span></div><div class="lbl">Locally Owned</div></div>
+  </div>
+</div>
+
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="review-band reveal">
+      <div class="review-band__stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
+      <h2>Rated <span class="accent">4.9 out of 5</span> by Swan Homeowners</h2>
+      <p>56 public Google reviews and counting. We didn't write them — your neighbors did. Read every one before you call.</p>
+      <div class="hero__actions" style="justify-content:center; margin:26px 0 0">
+        <a class="btn btn--ghost" href="https://www.google.com/search?q=First+Fruits+Construction+Swan+IA+reviews" target="_blank" rel="noopener">Read Our Reviews on Google <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="estimate">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div>
+        <h2>Ready When <span style="color:#A5C0FF">You Are</span></h2>
+        <p>Call or text (515) 218-1138 for a free estimate — a real person from Swan picks up, not a call center.</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a class="btn btn--red btn--lg" href="tel:5152181138"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 13 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"/></svg> (515) 218-1138</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-row"><span class="name">First Fruits Construction</span></div>
+        <div class="footer__tagline">Roofing · Swan, IA</div>
+        <p>Local roofing contractor serving Swan, IA and surrounding areas. Straight quotes, quality materials, and work that lasts.</p>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z"/></svg> Our Services</h4>
+        <ul class="footer__svc"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg><a href="#services">Roof Replacement</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><a href="#services">Roof Repair</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8a5 5 0 0 0-10 0 4 4 0 0 0-3 4c0 2.2 1.8 4 4 4h10a4 4 0 0 0 0-8h-1Z" transform="translate(0,-1)"/><path d="m13 13-2 4h3l-2 4"/></svg><a href="#services">Storm & Hail Damage</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v6c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg><a href="#services">Insurance Claims</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3"/><path d="M5 9c0-1.7 3.1-3 7-3s7 1.3 7 3-3.1 3-7 3-7-1.3-7-3Z"/><path d="M12 14v7"/><path d="M9 18l3 3 3-3"/></svg><a href="#services">Gutters & Protection</a></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 10h18M3 14h18M3 18h18"/><path d="M3 6l2-2h14l2 2"/></svg><a href="#services">Siding, Soffit & Fascia</a></li></ul>
+      </div>
+      <div>
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Contact Us</h4>
+        <ul class="footer__contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 13 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"/></svg> <a href="tel:5152181138">(515) 218-1138</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Swan, IA &amp; surrounding areas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6.5"/></svg> Free estimates &amp; inspections</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 First Fruits Construction. All rights reserved.</span>
+      <span>Website preview by <a href="mailto:banderson@eaglerevolution.com">Eagle Digital</a></span>
+    </div>
+  </div>
+</footer>
+<div class="callbar">
+  <a class="btn btn--red" href="tel:5152181138"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3A19.5 19.5 0 0 1 5.1 13 19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"/></svg> Call Now</a>
+  <a class="btn btn--primary" href="#estimate"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> Free Quote</a>
+</div>
 <script>
-function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
-
-/* hero title letters */
-const HERO_TITLE='DONE RIGHT';
-const heroTitleEl=document.getElementById('heroTitle');
-const letterEls=[];
-HERO_TITLE.split(' ').forEach((word)=>{
-  const w=document.createElement('span');w.className='word';
-  word.split('').forEach(ch=>{
-    const s=document.createElement('span');s.className='ltr';s.textContent=ch;
-    w.appendChild(s);letterEls.push(s);
-  });
-  heroTitleEl.appendChild(w);
+document.querySelectorAll('.reveal').forEach(function(el){
+  new IntersectionObserver(function(entries, io){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.15}).observe(el);
 });
-function startIntro(){
-  const lockup=document.querySelector('.hero-lockup-word');
-  const presents=document.querySelector('.hero-presents');
-  const sub=document.getElementById('heroSub');
-  const ladder=document.querySelector('.hero-ladder');
-  const cta=document.querySelector('.hero-cta');
-  const note=document.querySelector('.hero-note');
-  if(lockup)lockup.classList.add('in');
-  if(presents){presents.style.transitionDelay='.12s';presents.classList.add('in');}
-  heroTitleEl.classList.add('in');
-  letterEls.forEach((l,i)=>{l.style.transitionDelay=(0.28+i*0.045)+'s';l.classList.add('in');});
-  const after=0.28+letterEls.length*0.045;
-  [[sub,after+0.05],[ladder,after+0.18],[cta,after+0.30],[note,after+0.42]].forEach(([el,d])=>{
-    if(el){el.style.transitionDelay=d+'s';el.classList.add('in');}
-  });
-}
-
-/* count-up (supports decimals) */
-function animateCount(el){
-  const to=parseFloat(el.dataset.to);
-  const dec=parseInt(el.dataset.decimals||'0',10);
-  const suf=el.dataset.suffix||'';
-  const dur=1600;const start=performance.now();
-  function fmt(n){return n.toFixed(dec)+suf;}
-  function step(now){
-    const t=clamp((now-start)/dur,0,1);
-    const eased=1-Math.pow(1-t,3);
-    el.textContent=fmt(to*eased);
-    if(t<1)requestAnimationFrame(step);else el.textContent=fmt(to);
-  }
-  requestAnimationFrame(step);
-}
-
-/* reveal on scroll */
-function reveal(el){
-  if(el.classList.contains('in'))return;
-  el.classList.add('in');
-  if(el.matches('[data-stat]')){
-    const c=el.querySelector('.count');
-    if(c&&!c.dataset.done){c.dataset.done='1';animateCount(c);}
-  }
-}
-const revealEls=[...document.querySelectorAll('[data-stat],[data-pillar],[data-card],[data-reveal]')];
-const io=('IntersectionObserver'in window)?new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}});
-},{threshold:0.2,rootMargin:'0px 0px -8% 0px'}):null;
-if(io){revealEls.forEach(el=>io.observe(el));}else{revealEls.forEach(reveal);}
-function sweepReveal(){
-  const vh=window.innerHeight;
-  revealEls.forEach(el=>{
-    if(el.classList.contains('in'))return;
-    const r=el.getBoundingClientRect();
-    if(r.top<vh*0.9&&r.bottom>0)reveal(el);
-  });
-}
-window.addEventListener('scroll',sweepReveal,{passive:true});
-window.addEventListener('load',()=>setTimeout(sweepReveal,300));
-setTimeout(()=>revealEls.forEach(reveal),4000);
-if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches){revealEls.forEach(reveal);}
-
-startIntro();
+setTimeout(function(){ document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }, 3000);
+var lead=document.querySelector('form[data-lead]');
+if(lead){ lead.addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('This is a preview site — the form goes live when First Fruits Construction claims it.\n\nFor a real estimate, call (515) 218-1138.');
+}); }
 </script>
 </body>
 </html>
